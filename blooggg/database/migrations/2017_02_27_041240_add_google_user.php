@@ -15,7 +15,7 @@ class AddGoogleUser extends Migration
     {
         DB::table('google_user')->insert(array(
             'google_name'=>'bach',
-            'google_users'=>'bachbd',
+            'google_user'=>'bachbd',
             'google_email'=>'buibach@bdb.com',
             'google_password'=>'123456',
             'created_at'=>date('Y-m-d H:m:s'),
@@ -23,7 +23,7 @@ class AddGoogleUser extends Migration
         ));
         DB::table('google_user')->insert(array(
             'google_name'=>'bui',
-            'google_users'=>'soulthewind',
+            'google_user'=>'soulthewind',
             'google_email'=>'soulthewind@bdb.com',
             'google_password'=>'123456',
             'created_at'=>date('Y-m-d H:m:s'),
@@ -38,7 +38,7 @@ class AddGoogleUser extends Migration
      */
     public function down()
     {
-        DB::table('google_user')->where('google_name', '=', 'bach')->delete();
-        DB::table('google_user')->where('google_name', '=', 'bui')->delete();
+        DB::table('google_user')->where('name', '=', 'bach')->delete();
+        DB::table('google_user')->where('name', '=', 'bui')->delete();
     }
 }
