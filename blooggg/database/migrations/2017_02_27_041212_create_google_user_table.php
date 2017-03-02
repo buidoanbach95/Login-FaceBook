@@ -16,7 +16,7 @@ class CreateGoogleUserTable extends Migration
         Schema::create('google_user', function (Blueprint $table) {
             $table->increments('google_id');
             $table->string('google_name');
-            $table->string('google_user');
+            $table->string('google_users');
             $table->string('google_email');
             $table->string('google_password');
             $table->rememberToken();

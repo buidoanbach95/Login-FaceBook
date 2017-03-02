@@ -36,7 +36,7 @@ class AddUser extends Migration
      */
     public function down()
     {
-        DB::table('users')->where('mane', '=', 'back')->delete();
+        DB::table('users')->where('name', '=', 'back')->delete();
         DB::table('users')->where('name', '=', 'doan')->delete();
     }
 }
